@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ColDef} from "ag-grid-community";
+import {CRUDService} from "../services/crud.service";
 
 @Component({
   selector: 'app-product-list',
@@ -24,7 +25,7 @@ export class ProductListComponent implements OnInit{
     { field: "successful" },
     { field: "rocket" }
   ];
-  constructor() {
+  constructor(private crudService: CRUDService) {
   }
   ngOnInit() {
   }
